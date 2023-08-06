@@ -5,12 +5,12 @@ library(gganimate)
 library(tidyverse)
 library(gifski)
 
-setwd("Z:/ZW_R_DICT/Animated_plot/gtrend_movie/")
+setwd("~gtrend_movie/")
 #Run python scraping twice to capture sometimes missed data
-movie_gtrend_1 <- read_csv("Z:/ZW_R_DICT/Animated_plot/gtrend_movie/movie_gtrend_new.csv")
+movie_gtrend_1 <- read_csv("~gtrend_movie/movie_gtrend_new.csv")
 View(movie_gtrend)
 
-movie_gtrend_2 <- read_csv("Z:/ZW_R_DICT/Animated_plot/gtrend_movie/movie_gtrend_aug.csv")
+movie_gtrend_2 <- read_csv("~gtrend_movie/movie_gtrend_aug.csv")
 View(movie_gtrend)
 
 #combine two datasets to fill up some of the missing records
@@ -133,6 +133,6 @@ plot_usmap(data = movie_trend_top3,exclude = 'DC',
 gtrend_movie2<-animate(gtrend_movie,duration = 40, fps = 5, end_pause = 5,detail = 5,
                        height=600,width=800, res=80,renderer = gifski_renderer())
 
-
-anim_save("Z:/ZW_R_DICT/Animated_plot/gtrend_movie/gtrend_movie_updt.gif", gtrend_movie2)
+#save gif
+anim_save("~/gtrend_movie/gtrend_movie_updt.gif", gtrend_movie2)
   
