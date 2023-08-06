@@ -7,10 +7,10 @@ library(gifski)
 
 setwd("~gtrend_movie/")
 #Run python scraping twice to capture sometimes missed data
-movie_gtrend_1 <- read_csv("~gtrend_movie/movie_gtrend_new.csv")
+movie_gtrend_1 <- read_csv("~gtrend_movie/movie_gtrend_v1.csv")
 View(movie_gtrend)
 
-movie_gtrend_2 <- read_csv("~gtrend_movie/movie_gtrend_aug.csv")
+movie_gtrend_2 <- read_csv("~gtrend_movie/movie_gtrend_v2.csv")
 View(movie_gtrend)
 
 #combine two datasets to fill up some of the missing records
